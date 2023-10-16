@@ -9,8 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chart.js": "^4.4.0",
+    "faker": "^6.6.6",
+    "next": "13.5.4",
+    "next-auth": "^4.23.2",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
-    "next": "13.5.4"
+    "sass": "^1.69.2",
+    "sharp": "^0.32.6"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.1.0"
   }
 }

@@ -1,0 +1,46 @@
+@import "../../styles//utils.scss";
+@import "../../styles//colors.scss";
+
+.card {
+    @include flex-col;
+    gap: 5px;
+    box-shadow: 3px 3px 15px 0px $cardShadow;
+    max-width: 230px;
+    min-width: 230px;
+    min-height: 120px;
+    position: relative;
+    > p {
+        font-size: 12px;
+        font-family: var(--lato-font);
+        font-weight: 500;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span:first-of-type {
+            font-size: 25px;
+            font-weight: bold;
+            font-family: var(--opensans-font);
+        }
+        p {
+            @include set-Height-width(24px, 47px);
+            @include flex-center;
+            font-size: 10px;
+            font-weight: 400;
+            font-family: var(--opensans-font);
+            background-color: $cardSmallTextBg;
+            color: $cardSmallTextColor;
+            border-radius: 34px;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 20px;
+        right: 80px;
+    }
+}
+
+

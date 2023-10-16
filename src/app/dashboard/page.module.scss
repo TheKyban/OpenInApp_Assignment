@@ -1,0 +1,186 @@
+@import "../../styles/colors.scss";
+@import "../../styles/utils.scss";
+
+.DasboardWrapper {
+    @include set-Height-width(100%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $HomeLeftBgSecond;
+    gap: 60px;
+    padding: 50px;
+}
+.contentWrapper {
+    @include set-Height-width(100%, 100%);
+    max-width: 1000px;
+    @include flex-col;
+    gap: 40px;
+}
+.cardRow {
+    display: flex !important;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dot {
+    @include set-Height-width(8px, 8px);
+    border-radius: 50%;
+    background-color: black;
+}
+.chartWrapper {
+    height: 360px;
+    @include flex-col;
+    gap: 20px;
+    // box-shadow: 0px 0px 15px 2px #e0e0e0e3 !important;
+    .chartHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .info {
+            @include flex-col;
+            gap: 7px;
+            span:first-of-type {
+                font: 16px;
+                font-weight: bold;
+                font-family: var(--montserrat-font);
+            }
+            span:last-of-type {
+                font-size: 14px;
+                color: #858585;
+            }
+        }
+        .dots {
+            display: flex;
+            gap: 20px;
+            > div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .guestDot {
+                    background-color: #e9a0a0;
+                }
+                .userDot {
+                    background-color: #9bdd7c;
+                }
+
+                span {
+                    font-family: var(--lato-font);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .chart {
+        height: 85%;
+    }
+}
+
+.dasboardBottom {
+    display: flex;
+    justify-content: space-between;
+}
+.donutChartWrapper {
+    height: 22vh;
+    max-width: 450px;
+    min-width: 450px;
+    @include flex-col;
+    padding: 10px 20px;
+    gap: 20px;
+
+    .donut {
+        height: 73%;
+        display: flex;
+        justify-content: space-between;
+
+        .donutInfo {
+            padding: 0 20px;
+            .product {
+                .productName {
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+                    > span {
+                        font-family: var(--montserrat-font);
+                        font-weight: 600;
+                        font-size: 13px;
+                    }
+                }
+                > span {
+                    color: #858585;
+                    font-family: var(--lato-font);
+                    font-size: 12px;
+                    margin-left: 20px;
+                }
+            }
+
+            .productDot1 {
+                background-color: #98d89e;
+            }
+            .productDot2 {
+                background-color: #f6dc7d;
+            }
+            .productDot3 {
+                background-color: #ee8484;
+            }
+        }
+    }
+    .donutHeader {
+        display: flex;
+        justify-content: space-between;
+        span:first-of-type {
+            font-weight: var(--montserrat-font);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        span:last-of-type {
+            font-weight: var(--montserrat-font);
+            font-weight: normal;
+            font-size: 13px;
+            color: #858585;
+        }
+    }
+}
+
+.profile {
+    @include flex-center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+    min-width: 450px;
+    cursor: pointer;
+}
+.loading {
+    @include set-Height-width(100%, 100%);
+    @include flex-center;
+}
+.profileDetails {
+    height: 22vh;
+    max-width: 450px;
+    min-width: 450px;
+    @include flex-col;
+    padding: 40px 40px !important;
+    gap: 30px;
+
+    h1 {
+        font-size: 16px;
+    }
+}
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+        font-size: 12px;
+        color: #231f20;
+        border-bottom: 1px solid #231f20;
+    }
+}

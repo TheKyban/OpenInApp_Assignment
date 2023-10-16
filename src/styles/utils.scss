@@ -1,0 +1,19 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin set-Height-width($height, $width) {
+    height: $height;
+    width: $width;
+}
+@mixin border-outlin-none {
+    border: none;
+    outline: none;
+}

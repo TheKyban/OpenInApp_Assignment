@@ -1,0 +1,116 @@
+@import "../styles/colors.scss";
+@import "../styles/utils.scss";
+
+.home {
+    display: flex;
+    @include set-Height-width(100%, 100%);
+    background: linear-gradient(
+        100deg,
+        $HomeLeftBgFirst,
+        $HomeLeftBgFirst 45%,
+        $HomeLeftBgSecond 45%,
+        $HomeLeftBgSecond 100%
+    );
+
+    .loading {
+        @include set-Height-width(100%, 100%);
+        @include flex-center;
+        
+    }
+    .left {
+        width: 50%;
+        height: 100%;
+        @include flex-col;
+        justify-content: space-between;
+        padding: 30px 40px 80px;
+        .logo {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 900;
+            font-family: var(--poppins-font);
+        }
+        .title {
+            color: #fff;
+            font-size: 70px;
+            font-weight: bold;
+            font-family: var(--montserrat-font);
+            margin-left: 10vw;
+        }
+        .icons {
+            display: flex;
+            max-width: 300px;
+            gap: 15px;
+            justify-content: space-between;
+            margin-left: 6vw;
+        }
+    }
+    .right {
+        @include flex-center;
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 1040px) {
+    .home {
+        background: linear-gradient(
+            96deg,
+            $HomeLeftBgFirst,
+            $HomeLeftBgFirst 45%,
+            $HomeLeftBgSecond 45%,
+            $HomeLeftBgSecond 100%
+        );
+        .left {
+            .title {
+                margin-left: 5vw;
+            }
+            .icons {
+                max-width: 250px;
+                justify-content: space-between;
+                margin-left: 0vw;
+                .img {
+                    @include set-Height-width(38px, 38px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .home {
+        background: linear-gradient(
+            96deg,
+            $HomeLeftBgFirst,
+            $HomeLeftBgFirst 45%,
+            $HomeLeftBgSecond 45%,
+            $HomeLeftBgSecond 100%
+        );
+        .left {
+            width: 35%;
+            .title {
+                margin-left: 2vw;
+                font-size: 50px;
+            }
+            .icons {
+                max-width: 250px;
+                justify-content: space-between;
+                margin-left: 0vw;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .home {
+        background: linear-gradient(
+            105deg,
+            $HomeLeftBgFirst,
+            $HomeLeftBgFirst 45%,
+            $HomeLeftBgSecond 45%,
+            $HomeLeftBgSecond 100%
+        );
+        .left {
+            display: none !important;
+        }
+    }
+}

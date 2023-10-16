@@ -1,0 +1,32 @@
+@import "../../styles/colors.scss";
+@import "../../styles/utils.scss";
+
+.signWithBtn {
+    @include flex-center;
+    @include set-Height-width(32.93px, fit-content);
+    gap: 10px;
+    color: $BtnTextColor;
+    outline: none;
+    padding: 0 13px;
+    border: 2px solid transparent;
+    background-color: #ffffff;
+    font-size: 12px;
+    border-radius: 5px;
+    font-family: var(--montserrat-font);
+    transition: all 0.2s;
+    &:hover {
+        box-shadow: 0 0 5px $BtnBoxShadowColor;
+    }
+}
+
+.normalBtn {
+    width: 100%;
+    @include border-outlin-none;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--montserrat-font);
+    background-color: $PrimaryBorderColor;
+    color: #ffffff;
+}

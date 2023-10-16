@@ -1,0 +1,20 @@
+@import "../../styles/colors.scss";
+@import "../../styles/utils.scss";
+
+.form {
+    padding: 15px;
+    @include flex-col;
+    gap: 20px;
+    padding: 20px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    a {
+        color: $LinkColor;
+        font-family: var(--lato-font);
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,35 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.formWrapper {
+    @include flex-col;
+    max-width: 422px;
+    min-width: 350px;
+    height: fit-content;
+    gap: 15px;
+    font-family: var(--lato-font);
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        font-family: var(--montserrat-font);
+    }
+}
+.formContainer {
+    width: 100%;
+    @include flex-col;
+    gap: 15px;
+}
+.signInWith {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .formWrapper {
+        h1,.firstPTag {
+            color: #fff;
+        }
+    }
+}

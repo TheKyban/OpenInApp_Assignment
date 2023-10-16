@@ -1,0 +1,81 @@
+@import "../../styles/colors.scss";
+@import "../../styles/utils.scss";
+
+.popMenuWrapper {
+    position: absolute;
+    background-color: #00000050;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 5;
+
+    @include flex-center;
+}
+
+.popMenuCard {
+    min-width: 500px;
+    min-height: 300px;
+    border-radius: 16px;
+    box-shadow: none !important;
+    border: none !important;
+
+    @include flex-col;
+    gap: 20px;
+
+    .popMenuHeader {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-family: var(--montserrat-font);
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button {
+            @include border-outlin-none;
+            background-color: transparent;
+            @include set-Height-width(fit-content, fit-content);
+            cursor: pointer;
+        }
+    }
+}
+
+.formHeader {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+        font-size: 14px;
+        font-family: var(--montserrat-font);
+        width: 45%;
+        text-align: center;
+
+        div {
+            border-radius: 10px;
+            background-color:  #d9d9d9;
+            height: 3px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.basicForm {
+    @include flex-col;
+    gap: 25px;
+    margin-top: 25px;
+
+    .btn {
+        width: 70px;
+        font-size: 14px;
+        padding: 10px 15px;
+        align-self: flex-end;
+    }
+    
+    .btns {
+        display: flex;
+        align-self: flex-end;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,24 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+.inputWrapper {
+    @include flex-col;
+    gap: 5px;
+    label {
+        font-size: 15px;
+        font-family: var(--lato-font);
+        color: #231f20;
+    }
+    input {
+        @include border-outlin-none;
+        background-color: $InputBg;
+        
+        border-radius: 8px;
+        padding: 6px 15px;
+        // font-size: 16px;
+        vertical-align: middle;
+        font-family: var(--lato-font);
+        &:focus {
+            background-color: $inputFocusBg;
+        }
+    }
+}

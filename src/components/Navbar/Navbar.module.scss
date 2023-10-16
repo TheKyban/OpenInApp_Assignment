@@ -1,0 +1,62 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > h1 {
+        font-family: var(--montserrat-font);
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .right {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .search {
+            @include flex-center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            padding-right: 30px;
+            gap: 5px;
+            input {
+                @include border-outlin-none;
+                font-family: var(--lato-font);
+                font-size: 14px;
+            }
+            button {
+                @include border-outlin-none;
+                background-color: transparent;
+                text-align: center;
+                @include flex-center;
+            }
+        }
+    }
+}
+.profileContainer {
+    position: relative;
+}
+.profilePic {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logoutContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 0px $cardShadow;
+    gap: 10px;
+    right: 0%;
+    top: 120%;
+    cursor: pointer;
+}
