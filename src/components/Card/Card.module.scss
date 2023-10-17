@@ -5,8 +5,9 @@
     @include flex-col;
     gap: 5px;
     box-shadow: 3px 3px 15px 0px $cardShadow;
-    max-width: 230px;
+    // max-width: 230px;
     min-width: 230px;
+    @include set-Height-width(fit-content, fit-content);
     min-height: 120px;
     position: relative;
     > p {
@@ -20,7 +21,7 @@
         justify-content: space-between;
         align-items: center;
         span:first-of-type {
-            font-size: 25px;
+            font-size: 1.3rem;
             font-weight: bold;
             font-family: var(--opensans-font);
         }
@@ -42,5 +43,3 @@
         right: 80px;
     }
 }
-
-

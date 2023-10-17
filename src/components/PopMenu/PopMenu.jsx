@@ -6,14 +6,26 @@ import Image from "next/image";
 import InputWithLabel from "../InputWithLabel/InputWithLabel";
 import { Button } from "../Buttons/Button";
 
-const PopMenu = ({ closeHandler, user, setUser, doneFunc }) => {
+const PopMenu = ({ setAddDetails, user: User, doneFunc }) => {
     const [form, setForm] = useState("basic");
+    const [user, setUser] = useState(User);
     const changeHandler = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         console.log(name, value);
         setUser({ ...user, [name]: value });
     };
+    const closeHandler = () => {
+        setAddDetails(false);
+        setUser({
+            name: "",
+            email: "",
+            phone: "",
+            instagram: "",
+            youtube: "",
+        });
+    };
+
     // console.log(user);
     return (
         <div className={styles.popMenuWrapper}>
@@ -160,7 +172,7 @@ const ContactForm = ({ setForm, changeHandler, user, doneFunc }) => {
                     text="Back"
                 />
                 <Button
-                    clickfuc={doneFunc}
+                    clickfuc={() => doneFunc(user)}
                     className={styles.btn}
                     text="Done"
                 />

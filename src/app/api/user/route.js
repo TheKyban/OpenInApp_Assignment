@@ -4,7 +4,7 @@ import prisma from "../../../../prisma";
 export const POST = async (requst) => {
     try {
         const { email, name, phone, instagram, youtube } = await requst.json();
-        if (!email || !name || !phone) {
+        if (!email || !name) {
             return NextResponse.json({ error: "All fields are required" });
         }
         const isExist = await prisma.user.findFirst({ where: { email } });

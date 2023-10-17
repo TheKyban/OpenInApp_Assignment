@@ -163,9 +163,18 @@
     @include flex-col;
     padding: 40px 40px !important;
     gap: 30px;
-
-    h1 {
-        font-size: 16px;
+    .profileHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            font-size: 16px;
+        }
+        img {
+            background-color: $cardSmallTextBg;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     }
 }
 .details {

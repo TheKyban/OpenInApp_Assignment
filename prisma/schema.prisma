@@ -14,7 +14,7 @@ model User {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   email     String  @unique
-  phone     String
+  phone     String?
   instagram String?
   youtube   String?
 }
@@ -30,4 +30,5 @@ model Data {
   total_likes        Json
   guest              Int[]
   user               Int[]
+  top_products        Json[]
 }

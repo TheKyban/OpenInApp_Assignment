@@ -12,7 +12,7 @@ import React from "react";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement);
 
-const Chart = () => {
+const Chart = ({ data1, data2 }) => {
     const labels = ["Week 1", "Week 2", "Week 3", "Week 4"];
     return (
         <Bar
@@ -21,19 +21,14 @@ const Chart = () => {
                 datasets: [
                     {
                         label: "Dataset 1",
-                        data: labels.map(() =>
-                            faker.number.int({ min: 0, max: 500 })
-                        ),
+                        data: data1,
                         backgroundColor: "#98D89E",
                         borderRadius: 10,
                         barPercentage: 0.7,
                     },
                     {
                         label: "Dataset 2",
-                        data: labels.map(() =>
-                            faker.number.int({ min: 0, max: 500 })
-                        ),
-
+                        data: data2,
                         backgroundColor: "#EE8484",
                         borderRadius: 10,
                         barPercentage: 0.7,
