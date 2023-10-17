@@ -78,7 +78,7 @@ const Dasboard = () => {
                 </div>
             ) : (
                 <>
-                    <Sidebar />
+                        <Sidebar />
                     <div className={styles.contentWrapper}>
                         <Navbar />
 
@@ -144,7 +144,6 @@ const Dasboard = () => {
                         {/* Pop Menu */}
                         {addDetails && (
                             <PopMenu
-                                
                                 setAddDetails={setAddDetails}
                                 user={user}
                                 doneFunc={updateDetails}

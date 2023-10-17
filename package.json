@@ -1,27 +1,28 @@
 {
-  "name": "open-in-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@prisma/client": "^5.4.2",
-    "chart.js": "^4.4.0",
-    "faker": "^6.6.6",
-    "next": "13.5.4",
-    "next-auth": "^4.23.2",
-    "react": "^18",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18",
-    "sass": "^1.69.2",
-    "sharp": "^0.32.6"
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^8.1.0",
-    "prisma": "^5.4.2"
-  }
+    "name": "open-in-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "start": "next start",
+        "lint": "next lint",
+        "postinstall": "prisma generate",
+        "build": "prisma generate && next build"
+    },
+    "dependencies": {
+        "@prisma/client": "^5.4.2",
+        "chart.js": "^4.4.0",
+        "faker": "^6.6.6",
+        "next": "13.5.4",
+        "next-auth": "^4.23.2",
+        "react": "^18",
+        "react-chartjs-2": "^5.2.0",
+        "react-dom": "^18",
+        "sass": "^1.69.2",
+        "sharp": "^0.32.6"
+    },
+    "devDependencies": {
+        "@faker-js/faker": "^8.1.0",
+        "prisma": "^5.4.2"
+    }
 }
