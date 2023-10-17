@@ -48,10 +48,10 @@ const Dasboard = () => {
                         {/* Cards */}
                         <div className={styles.cardRow}>
                             <Card
-                                img={"/users.png"}
-                                text={"Total Users"}
-                                numberText={"9,721"}
-                                increment={"+4.2%"}
+                                img={"/revenue.png"}
+                                text={"Total Revenue"}
+                                numberText={"$2,129,430"}
+                                increment={"+2.5%"}
                             />
                             <Card
                                 img={"/transactions.png"}
