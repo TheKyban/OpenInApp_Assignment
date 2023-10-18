@@ -7,7 +7,6 @@ import {
     BarElement,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { faker } from "@faker-js/faker";
 import React from "react";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement);
